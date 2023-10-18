@@ -1,3 +1,3 @@
-idf_component_register(SRCS "test_max30102.c"
+idf_component_register(SRC_DIRS "."
                        INCLUDE_DIRS "."
-                       PRIV_REQUIRES cmock unity max30102)
+                       REQUIRES unity max30102) 
