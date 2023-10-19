@@ -33,5 +33,6 @@ https://github.com/Patri42/ESP32-POXIMETRY-LCD-WIFI/assets/123195888/facbbd3f-6b
 ## Documentation with Diagrams/Images
 
 ## Source Code Management on GitHub
+All source code for this project is managed and versioned on GitHub. Regular updates, commits, and modifications can be tracked in the repository's commit history.
 
 ## Development Process Documentation on GitHub
