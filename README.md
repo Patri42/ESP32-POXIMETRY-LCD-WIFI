@@ -33,6 +33,9 @@ The project consists of several files structured as follows:
 - `max30102.c` & `max30102.h` & `max30102-data.h` - Files related to the MAX30102 PPG sensor.
 - `thingspeak-manager.c` & `thingspeak-manager.h` - Manages the connection and data transfer to ThingSpeak cloud.
 
+### Development Environment
+The code for this project was written using [Visual Studio Code](https://code.visualstudio.com/) as the preferred IDE. The project utilizes the [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/) framework and is coded in the C programming language.
+
 ## Unit Tests
 
 Unit tests for this project are currently under development.
