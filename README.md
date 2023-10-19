@@ -4,12 +4,21 @@ This project is designed to measure BPM and oximetry levels using ESP32 integrat
 
 ## Table of Contents
 
+- [Inspiration](#inspiration)
 - [Project Structure](#project-structure)
 - [Unit Tests](#unit-tests)
 - [Demonstration Video](#demonstration-video)
 - [Diagrams](#diagrams)
 - [Source Code Management on GitHub](#source-code-management-on-gitHub)
 - [Development Process](#development-process)
+
+## Inspiration
+
+This project draws inspiration from two of my previous projects:
+- **ESP32-MAX30102**: An initial exploration into interfacing the ESP32 with the MAX30102 sensor.
+- **ESP32-WIFI-Thingspeak**: An endeavor where I worked on connecting the ESP32 to WiFi and sending data to ThingSpeak.
+
+Building upon the knowledge and experience gained from these projects, this current project aims to seamlessly integrate the capabilities of both into a comprehensive solution.
 
 ## Project Structure
 
