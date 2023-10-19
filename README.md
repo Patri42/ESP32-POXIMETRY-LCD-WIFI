@@ -26,3 +26,12 @@ The project consists of several files structured as follows:
 
 Unit tests for this project are currently under development.
 
+## Demonstration Video
+
+https://github.com/Patri42/ESP32-POXIMETRY-LCD-WIFI/assets/123195888/facbbd3f-6b16-4892-b47d-675998182d70
+
+## Documentation with Diagrams/Images
+
+## Source Code Management on GitHub
+
+## Development Process Documentation on GitHub
