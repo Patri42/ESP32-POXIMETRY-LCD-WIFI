@@ -38,9 +38,8 @@ void app_main(void)
     sensorDataQueue = xQueueCreate(10, sizeof(SensorData));
     ESP_LOGE("APP_MAIN", "Completed to create sensor data queue");
     if (sensorDataQueue == NULL) {
-        // Handle the error. Maybe log an error message or halt the system.
         ESP_LOGE("APP_MAIN", "Failed to create sensor data queue");
-        return;  // or handle error in another suitable way
+        return;  
     }
 
     // Always create the LCD task to display data
