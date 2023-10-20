@@ -2,6 +2,8 @@
 
 This project is designed to measure BPM and oximetry levels using ESP32 integrated with an LCD and a PPG (max30102). The measured data is then sent to ThingSpeak for observation and data storage.
 
+-- Write about how ESP32 is economy and energy efficient.
+
 ## Table of Contents
 
 - [Inspiration](#inspiration)
