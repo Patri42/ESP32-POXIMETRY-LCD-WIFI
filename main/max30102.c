@@ -40,18 +40,15 @@ void max30102_task (void *pvParameters) {
     printf("max30102_task is running...\n");
     
     SensorData sensorData;
-    // HealthMetrics metrics;
     int cnt, samp, tcnt = 0;
     uint8_t rptr, wptr;
     uint8_t data;
     uint8_t regdata[256];
-    //int irmeas, redmeas;
     float firxv[5], firyv[5], fredxv[5], fredyv[5];
     float lastmeastime = 0;
     float hrarray[5] = {0, 0, 0, 0, 0};
     float spo2array[5] = {0, 0, 0, 0, 0};
     int hrarraycnt = 0;
-    //char buffer[16];
     sensorData.heartrate = 99.2;
     sensorData.pctspo2 = 99.2;
 
@@ -91,15 +88,6 @@ void max30102_task (void *pvParameters) {
             fredyv[4] = (fredxv[0] + fredxv[4]) - 2 * fredxv[2]
                     + ( -0.1718123813 * fredyv[0]) + (  0.3686645260 * fredyv[1])
                     + ( -1.1718123813 * fredyv[2]) + (  1.9738037992 * fredyv[3]);
-
-            //if (-1.0 * firyv[4] >= 100 && -1.0 * firyv[3] < 100){
-            //   heartrate = 60 / (meastime - lastmeastime);
-            //   pctspo2 = 110 - 25 * ((fredyv[4]/fredxv[4]) / (firyv[4]/firxv[4]));
-            //   printf ("%6.2f  %4.2f     hr= %5.1f     spo2= %5.1f\n", meastime, meastime - lastmeastime, heartrate, pctspo2);
-            //   lastmeastime = meastime;
-            //}
-
-            //printf("%8.1f %8.1f %8.1f %8.3f\n", -1.0 * firyv[0], -1.0 * firyv[2], -1.0 * firyv[4], meastime-lastmeastime); 
 
             // Compute and display heart rate and SpO2 using detected peaks
             if (-1.0 * firyv[4] >= 100 && -1.0 * firyv[2] > -1*firyv[0] && -1.0 * firyv[2] > -1*firyv[4] && meastime-lastmeastime > 0.5){

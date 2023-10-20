@@ -22,6 +22,18 @@ This project draws inspiration from two of my previous projects:
 
 Building upon the knowledge and experience gained from these projects, this current project aims to seamlessly integrate the capabilities of both into a comprehensive solution.
 
+### Component Optimization
+
+For this project, the selected components - ESP32, LCD, and the MAX30102 sensor - have been carefully chosen and optimized with respect to business-critical parameters:
+
+- **Price**: Each component was selected based on its cost-effectiveness, ensuring the project remains budget-friendly.
+  
+- **Power Consumption**: Power efficiency was a primary concern. The ESP32, LCD, and MAX30102 have been configured to operate with minimal energy wastage.
+  
+- **Performance**: While maintaining affordability and energy efficiency, the performance of the components was not compromised. The combination ensures accurate and efficient measurement and display of BPM and oximetry levels.
+  
+In practical terms, this project does not utilize any development board as such, but focuses solely on the microcontroller and the essential components, offering a streamlined and purpose-specific design.
+
 ## Project Structure
 
 The project consists of several files structured as follows:
