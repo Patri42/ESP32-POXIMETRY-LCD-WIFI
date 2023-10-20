@@ -58,5 +58,5 @@ void thingspeak_send_data(void *pvParameters)
 
             vTaskDelay(16000 / portTICK_PERIOD_MS); // Delay 16 seconds as per ThingSpeak rate limits
         }
-    }  // This closing brace was missing
+    }
 }
