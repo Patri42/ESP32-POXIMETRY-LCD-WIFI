@@ -57,6 +57,34 @@ Unit tests for this project are currently under development.
 https://github.com/Patri42/ESP32-POXIMETRY-LCD-WIFI/assets/123195888/facbbd3f-6b16-4892-b47d-675998182d70
 
 ## Diagrams
+![setup](https://github.com/Patri42/ESP32-POXIMETRY-LCD-WIFI/assets/123195888/ad1803a1-31f5-46d2-87e3-bbcfbfff9b91)
+
+### Hardware Connections
+
+#### LED to ESP32 Connections:
+
+| **LED Pin** | **ESP32 Pin**  |
+|-------------|----------------|
+| K           | GND            |
+| A           | 5V             |
+| D7          | RX2            |
+| D6          | TX2            |
+| D5          | D18            |
+| D4          | D19            |
+| E/R         | D22            |
+| RW          | GND            |
+| V0          | Potentiometer  |
+| VSS         | GND Pot        |
+| VDD         | 5V Pot         |
+
+#### MAX30102 to ESP32 Connections:
+
+| **MAX30102 Pin** | **ESP32 Pin** |
+|------------------|---------------|
+| VIN              | 3V3           |
+| SDA              | D21           |
+| SCL              | D5            |
+| GND              | GND           |
 
 ## Source Code Management on GitHub
 All source code for this project is managed and versioned on GitHub. Regular updates, commits, and modifications can be tracked in the repository's commit history.
