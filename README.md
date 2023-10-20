@@ -57,7 +57,7 @@ Unit tests for this project are currently under development.
 https://github.com/Patri42/ESP32-POXIMETRY-LCD-WIFI/assets/123195888/facbbd3f-6b16-4892-b47d-675998182d70
 
 ## Diagrams
-![setup](https://github.com/Patri42/ESP32-POXIMETRY-LCD-WIFI/assets/123195888/ad1803a1-31f5-46d2-87e3-bbcfbfff9b91)
+![setup1](https://github.com/Patri42/ESP32-POXIMETRY-LCD-WIFI/assets/123195888/ea925538-89c2-4900-920a-d2055831acc6)
 
 ### Hardware Connections
 
