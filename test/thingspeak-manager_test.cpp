@@ -2,6 +2,7 @@
 #include "thingspeak-manager.h"
 #include "max30102-data.h"
 #include "esp_http_client.h"
+#include "mock_freertos.h"
 
 static esp_http_client_handle_t mock_http_client_handle = (esp_http_client_handle_t) 1;  // Some dummy value.
 static int mock_http_status_code = 200;  // Default to success. Can be adjusted for different tests.
@@ -10,8 +11,8 @@ static const char* mock_last_set_header_value;
 // Mocks
 
 // Mock FreeRTOS Queue
-BaseType_t mock_xQueueReceive(QueueHandle_t xQueue, void *pvBuffer, TickType_t xTicksToWait) {
-    // Simulate receiving from the queue.
+BaseType_t xQueueReceive(QueueHandle_t xQueue, void *pvBuffer, TickType_t xTicksToWait) {
+
     ((SensorData*)pvBuffer)->heartrate = 70.5;
     ((SensorData*)pvBuffer)->pctspo2 = 99.0;
     return pdTRUE;

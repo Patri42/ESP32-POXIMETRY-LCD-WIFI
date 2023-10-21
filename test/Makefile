@@ -12,11 +12,13 @@ TEST_FILES = thingspeak-manager_test.cpp
 GTEST_DIR = googletest/googletest
 GTEST_LIB = $(GTEST_DIR)
 
+ESP_IDF_PATH = C:\\Espressif\\frameworks\\esp-idf-v5.1.1\\examples\\build_system\\cmake\\idf_as_lib\\stubs
+
 # Flags passed to the C++ compiler.
-CPPFLAGS += -isystem $(GTEST_DIR)/include
+CPPFLAGS += -isystem $(GTEST_DIR)/include -I. -I$(MAIN_DIR) -I$(ESP_IDF_PATH)\freertos\freertos
 
 # Flags passed to the C compiler
-CFLAGS +=
+CFLAGS += -I. -I$(MAIN_DIR) -I$(ESP_IDF_PATH)\freertos\freertos
 
 # All tests produced by this Makefile.
 TESTS = run_tests
