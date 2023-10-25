@@ -46,7 +46,7 @@ The project consists of several files structured as follows:
 - `thingspeak-manager.c` & `thingspeak-manager.h` - Manages the connection and data transfer to ThingSpeak cloud.
 
 ### Development Environment
-The code for this project was written using [Visual Studio Code](https://code.visualstudio.com/) as the preferred IDE. The project utilizes the [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/) framework and is coded in the C programming language.
+The code for this project was written using [Visual Studio Code](https://code.visualstudio.com/) as the preferred IDE with the PlatformIO extension. The project utilizes the [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/) framework and is coded in the C programming language.
 
 ## Unit Tests
 
@@ -113,77 +113,17 @@ All source code for this project is managed and versioned on GitHub. Regular upd
 
 ## Development Process
 
-### Ideation and Initial Planning:
+I started this project because of my background in physiotherapy. I wanted to know how those little devices doctors put on your finger – pulse oximeters – worked and how they could send data to the cloud. The main goal? Get that sensor data up on the cloud.
 
-#### Core Idea and Inspiration:
+When picking parts for this project, I had two things in mind: cheap and energy-efficient. That's why I went with the ESP32, LCD, and MAX30102. They were affordable, didn’t use much power, and I could program them using C.
 
-The spark behind this project stemmed from my background in physiotherapy. As someone deeply immersed in healthcare, I've always been curious about the workings of various medical devices. One such device, the pulse oximeter, caught my attention. My inquisitiveness led me to wonder about the mechanism behind its operation and its potential in cloud data transfer. This thought was the cornerstone of my project. The overarching goal was clear: Develop a method to transmit data directly from a sensor to cloud storage.
+At first, I tried using an Arduino Uno and some code in AVR-C. It didn’t work out, so I switched to the ESP32. It was stronger and easier to work with, especially using the ESP-IDF setup.
 
-#### Component Selection Reasons:
+Learning the ropes of ESP-IDF and Platform IO was a bit like starting from scratch. While I knew some parts of it, bringing WiFi, the LED display, and the sensor together was a new challenge. I had to pull code from different places online and tweak it to make it fit my project. Especially this thing called queuetasks – that was a tough nut to crack!
 
-My choices for the core components - ESP32, LCD, and MAX30102 - were driven by a mix of cost-effectiveness and energy efficiency. Moreover, I intended to make the most out of the C programming language. Through rigorous research and trial, I found that these components offered the best balance in terms of cost, power consumption, and functionality.
+Then came testing. Picking the right way to test was hard. I had a lot of options, but in the end, I went with unity because it worked well with ESP-IDF. The tests went well, even though I had some issues with another method called googletest.
 
-### Hardware Integration:
+Writing everything down as I went along helped a ton. It kept me on track and reminded me of what I did, both the good stuff and the mistakes.
 
-#### Prototyping Challenges:
-
-The initial stages of prototyping weren't smooth . I initially began with Arduino Uno and tried using AVR-C. However, the limitations soon became evident, prompting a switch to ESP32. This transition was fueled by ESP32's robust capabilities and the ease of coding it offered, especially with the ESP-IDF framework.
-
-#### Validation Findings:
-
-From a hardware integration standpoint, this project wasn't particularly challenging in terms of setup. The connections were straightforward, with minimal complications.
-
-### Software Development:
-
-#### Environment Challenges:
-
-Diving into the ESP-IDF and Platform IO was like stepping into a whole new world for me. Sure, I knew a bit about some of the parts, but putting together the WiFi, LED display, and the sensor? That was something I hadn't tackled before. It was tough, but with a bit of grit, I got the hang of it. 
-
-#### Individual Module Challenges:
-
-The project necessitated extensive code modification. Drawing from various sources on GitHub, I had to reshape the code to fit the project's unique requirements. One particular challenge was managing queuetasks, which took considerable effort to streamline.
-
-#### Integration Challenges:
-
-After wrestling with the queuetasks and streamlining their operation, the integration of different modules became a smoother process.
-
-### Testing:
-
-#### Unit Testing:
-
-Choosing the appropriate unit testing method posed its own set of challenges. While there were multiple options like unity and googletest, I eventually settled on unity because of its prevalent use in ESP-IDF projects.
-
-#### Integration Testing:
-
-Hardware-based tests proved to be a stumbling block. Encountering issues with the ESP32's reset button, I pivoted to mock testing, relying on mock functions and variables for validation.
-
-#### Performance Testing:
-
-Performance testing didn't yield any standout benchmarks or challenges.
-
-### Iteration and Feedback:
-
-#### Initial Testing Feedback:
-
-The first round of testing with the ThingSpeak Data Send Test yielded successful results. However, challenges arose when attempting to use googletest with a Makefile, primarily due to compatibility issues with ESP-IDF libraries.
-
-#### Significant Iterations:
-
-Based on feedback and test results, no major iterations or overhauls were needed for the project.
-
-### Documentation and Deployment:
-
-#### Documentation Challenges:
-
-I adopted a proactive approach to documentation by maintaining records throughout the development process. This strategy proved invaluable, especially in keeping track of progress and revisiting earlier stages of the project.
-
-### Miscellaneous:
-
-#### Major Challenges:
-
-Throughout the project's lifecycle, I faced and overcame numerous unforeseen challenges.
-
-#### Collaborations:
-
-My programming teacher and fellow classmates played a pivotal role in guiding me through the intricacies of the development process. Their invaluable input and expertise significantly influenced the project's direction and success.
+I've got to give a shoutout to my programming teacher and my fellow classmates. They were a big help, guiding me when things got tricky.
 
