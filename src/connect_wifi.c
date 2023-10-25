@@ -1,7 +1,7 @@
 #include "connect_wifi.h"
 
-#define EXAMPLE_ESP_WIFI_SSID "WLAN3"
-#define EXAMPLE_ESP_WIFI_PASS "133743v3R!"
+#define EXAMPLE_ESP_WIFI_SSID "XXX"
+#define EXAMPLE_ESP_WIFI_PASS "XXX"
 
 #define EXAMPLE_ESP_MAXIMUM_RETRY 30
 
