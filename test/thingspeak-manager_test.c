@@ -1,4 +1,3 @@
-//#include "test_helpers.h"
 #include "mock_thingspeak_manager.h"
 #include "mock_esp_http_client.h"
 #include "unity.h"
