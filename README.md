@@ -113,3 +113,77 @@ All source code for this project is managed and versioned on GitHub. Regular upd
 
 ## Development Process
 
+### Ideation and Initial Planning:
+
+#### Core Idea and Inspiration:
+
+The spark behind this project stemmed from my background in physiotherapy. As someone deeply immersed in healthcare, I've always been curious about the workings of various medical devices. One such device, the pulse oximeter, caught my attention. My inquisitiveness led me to wonder about the mechanism behind its operation and its potential in cloud data transfer. This thought was the cornerstone of my project. The overarching goal was clear: Develop a method to transmit data directly from a sensor to cloud storage.
+
+#### Component Selection Reasons:
+
+My choices for the core components - ESP32, LCD, and MAX30102 - were driven by a mix of cost-effectiveness and energy efficiency. Moreover, I intended to make the most out of the C programming language. Through rigorous research and trial, I found that these components offered the best balance in terms of cost, power consumption, and functionality.
+
+### Hardware Integration:
+
+#### Prototyping Challenges:
+
+The initial stages of prototyping weren't smooth . I initially began with Arduino Uno and tried using AVR-C. However, the limitations soon became evident, prompting a switch to ESP32. This transition was fueled by ESP32's robust capabilities and the ease of coding it offered, especially with the ESP-IDF framework.
+
+#### Validation Findings:
+
+From a hardware integration standpoint, this project wasn't particularly challenging in terms of setup. The connections were straightforward, with minimal complications.
+
+### Software Development:
+
+#### Environment Challenges:
+
+Diving into the ESP-IDF and Platform IO was like stepping into a whole new world for me. Sure, I knew a bit about some of the parts, but putting together the WiFi, LED display, and the sensor? That was something I hadn't tackled before. It was tough, but with a bit of grit, I got the hang of it. 
+
+#### Individual Module Challenges:
+
+The project necessitated extensive code modification. Drawing from various sources on GitHub, I had to reshape the code to fit the project's unique requirements. One particular challenge was managing queuetasks, which took considerable effort to streamline.
+
+#### Integration Challenges:
+
+After wrestling with the queuetasks and streamlining their operation, the integration of different modules became a smoother process.
+
+### Testing:
+
+#### Unit Testing:
+
+Choosing the appropriate unit testing method posed its own set of challenges. While there were multiple options like unity and googletest, I eventually settled on unity because of its prevalent use in ESP-IDF projects.
+
+#### Integration Testing:
+
+Hardware-based tests proved to be a stumbling block. Encountering issues with the ESP32's reset button, I pivoted to mock testing, relying on mock functions and variables for validation.
+
+#### Performance Testing:
+
+Performance testing didn't yield any standout benchmarks or challenges.
+
+### Iteration and Feedback:
+
+#### Initial Testing Feedback:
+
+The first round of testing with the ThingSpeak Data Send Test yielded successful results. However, challenges arose when attempting to use googletest with a Makefile, primarily due to compatibility issues with ESP-IDF libraries.
+
+#### Significant Iterations:
+
+Based on feedback and test results, no major iterations or overhauls were needed for the project.
+
+### Documentation and Deployment:
+
+#### Documentation Challenges:
+
+I adopted a proactive approach to documentation by maintaining records throughout the development process. This strategy proved invaluable, especially in keeping track of progress and revisiting earlier stages of the project.
+
+### Miscellaneous:
+
+#### Major Challenges:
+
+Throughout the project's lifecycle, I faced and overcame numerous unforeseen challenges.
+
+#### Collaborations:
+
+My programming teacher and fellow classmates played a pivotal role in guiding me through the intricacies of the development process. Their invaluable input and expertise significantly influenced the project's direction and success.
+
