@@ -9,10 +9,8 @@
 
 extern QueueHandle_t sensorDataQueue;
 
-//QueueHandle_t sensorDataQueue = NULL;
-
-void max30102_init(void); // Declare function for initializing MAX30102 sensor
-void max30102_task(void *pvParameters) ; // Declare function to handle MAX30102 task
+void max30102_init(void); 
+void max30102_task(void *pvParameters) ; 
 
 
 #endif // MAX30102_H

@@ -57,7 +57,6 @@ void mock_thingspeak_send_data(void *pvParameters)
 
     while (send_count < 10) // Limit the loop to 10 sends
     {    
-        // Mock: Directly using the mock sensor data without checking any queue.
         char thingspeak_url[200];
         snprintf(thingspeak_url,
                 sizeof(thingspeak_url),
@@ -69,21 +68,17 @@ void mock_thingspeak_send_data(void *pvParameters)
                 "&field2=",
                 sensorData.pctspo2);
 
-        // Mock: Pretending as if we have initialized the client.
         ESP_LOGI(TAG, "Mock client initialized with URL: %s", thingspeak_url);
 
-        // Mock: Pretending as if we have set the header.
         ESP_LOGI(TAG, "Mock header set: Content-Type = application/x-www-form-urlencoded");
         g_mock_header_name = strdup("Content-Type");
         g_mock_header_value = strdup("application/x-www-form-urlencoded");
 
-        // Mock: Pretending as if we have performed the HTTP request.
         ESP_LOGI(TAG, "Mock HTTP request performed.");
 
-        // Mock: Always assume it's successful for testing.
+        
         ESP_LOGI(TAG, "Message sent Successfully (Mocked)");
 
-        // Mock: No need for a real delay, but we can keep a short one if you want.
         vTaskDelay(1000 / portTICK_PERIOD_MS); 
 
         send_count++;  // Increment the send counter
