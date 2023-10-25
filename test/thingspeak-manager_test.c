@@ -20,9 +20,9 @@ void tearDown(void) {
 }
 
 void test_successful_data_send(void) {
-    mock_thingspeak_send_data(NULL);  // Call your function
+    mock_thingspeak_send_data(NULL); 
     TEST_ASSERT_EQUAL_STRING("Content-Type", g_mock_header_name);
-    TEST_ASSERT_EQUAL_STRING("application/x-www-form-urlencoded", g_mock_header_value);  // Checking that the header was set correctly
+    TEST_ASSERT_EQUAL_STRING("application/x-www-form-urlencoded", g_mock_header_value);
 
     // Free the memory allocated for the mock headers
     free(g_mock_header_name);
