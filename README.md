@@ -50,7 +50,29 @@ The code for this project was written using [Visual Studio Code](https://code.vi
 
 ## Unit Tests
 
-Unit tests for this project are currently under development.
+### ThingSpeak Data Send Test for ESP32
+
+#### Overview
+This repository contains a test setup for the ESP32's functionality to send data to ThingSpeak. We've mocked the HTTP client calls to verify the behavior without actually sending data over the network. This approach ensures that our core logic functions correctly without relying on external factors like network connectivity or ThingSpeak's server status.
+
+#### Key Components:
+
+- **Mocked HTTP Client:** Instead of making actual network calls, the mock functions simulate the behavior of the `esp_http_client`. They provide controlled responses to the main code, ensuring we can consistently reproduce various scenarios for testing.
+
+- **Test Logic:** The test function, `test_successful_data_send`, checks whether our code correctly initializes the mock HTTP client, sets the expected header, and constructs the correct URL to send data.
+
+#### Testing Instructions:
+
+1. Ensure you've installed the required dependencies, especially the [PlatformIO](https://platformio.org/) CLI.
+2. Navigate to the project's root directory.
+3. Run the test with the following command:
+
+```bash
+pio test -vvv
+```
+This command will execute the tests with very verbose output (-vvv), giving you detailed information on each step of the test.
+
+Once the tests are complete, you should see a summary indicating whether the tests passed or failed.
 
 ## Demonstration Video
 
